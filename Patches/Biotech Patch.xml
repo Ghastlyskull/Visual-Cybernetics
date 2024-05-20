@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!---->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>*/HediffDef[defName="MechlinkImplant"]</xpath>
+					<value>
+						<renderNodeProperties>
+							<li Class="PawnRenderNodeProperties">
+								<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+								<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+								<texPath>Things/Pawn/Humanlike/BodyAttachments/MechLink/MechLink</texPath>
+								<parentTagDef>Head</parentTagDef>
+								<debugLabel>Base Layer</debugLabel>
+								<drawSize>1</drawSize>
+								<drawData>
+									<defaultData>
+										<layer>66</layer>
+									</defaultData>
+								</drawData>
+							</li>
+						</renderNodeProperties>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>*/HediffDef[defName="MechlinkImplant"]</xpath>
+					<value>
+						<li Class="BodyAttachments.DefModExtension_HediffLayer"/>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!---->
+</Patch>
