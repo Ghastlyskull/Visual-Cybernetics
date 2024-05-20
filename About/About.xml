@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>Ghastly.VisualCybernetics</packageId>
+    <name>Visual Cybernetics</name>
+    <author>ghastlyskull</author>
+    <supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Rimworld - Biotech</displayName>
+			<steamWorkshopUrl>https://store.steampowered.com/app/1826140/RimWorld__Biotech/</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+		<li>brrainz.harmony</li>
+	</loadAfter>
+    <description>Visually enhance your pawns with the Visual Cybernetics mod, featuring a recon eye and three new shoulder-mounted appendages. This mod also adds custom textures to base game and official DLC prosthetics, giving your colonists a sleek, high-tech appearance.</description>
+</ModMetaData>
