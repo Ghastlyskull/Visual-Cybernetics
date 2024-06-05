@@ -20,7 +20,7 @@
 				<texPath>Things/Pawn/Humanlike/BodyAttachments/ReconEye/ReconEye</texPath>
 				<parentTagDef>Head</parentTagDef>
 				<debugLabel>Base Layer</debugLabel>
-				<drawSize>0.22</drawSize>
+				<drawSize>0.21</drawSize>
 				<drawData>
 					<defaultData>
 						<layer>56</layer>
