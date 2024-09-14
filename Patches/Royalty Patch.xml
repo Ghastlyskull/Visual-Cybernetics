@@ -261,7 +261,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAddModExtension">
-					<xpath>*/HediffDef[defName="PsychicHarmonizer"]</xpath>
+					<xpath>*/HediffDef[defName="PsychicSensitizer"]</xpath>
 					<value>
 						<li Class="BodyAttachments.DefModExtension_HediffLayer"/>
 					</value>
@@ -290,6 +290,14 @@
 					<xpath>*/HediffDef[defName="PsychicHarmonizer"]</xpath>
 					<value>
 						<li Class="BodyAttachments.DefModExtension_HediffLayer"/>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>*/HediffDef[defName="DrillArm"]</xpath>
+					<value>
+						<li Class="BodyAttachments.DefModExtension_ArmGraphicPath">
+							<path>Things/Pawn/Humanlike/BodyAttachments/BionicArms/DrillArm</path>
+						</li>
 					</value>
 				</li>
 			</operations>
