@@ -5,12 +5,13 @@
 
 	<!--Crafting Appendage-->
 
-	<HediffDef ParentName="ImplantHediffBase">
+	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>Gha_CrafterAppendage</defName>
 		<label>crafter appendage</label>
 		<labelNoun>a crafter appendage</labelNoun>
 		<description>An installed crafter appendage. A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with crafting.</description>
 		<defaultInstallPart>Shoulder</defaultInstallPart>
+		<spawnThingOnRemoved>Gha_CrafterAppendage</spawnThingOnRemoved>
 		<stages>
 			<li>
 				<statOffsets>
@@ -147,12 +148,13 @@
 
 	<!--Drill Appendage-->
 
-	<HediffDef ParentName="ImplantHediffBase">
+	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>Gha_DrillAppendage</defName>
 		<label>drill appendage</label>
 		<labelNoun>a drill appendage</labelNoun>
 		<description>An installed crafter appendage. A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with mining.</description>
 		<defaultInstallPart>Shoulder</defaultInstallPart>
+		<spawnThingOnRemoved>Gha_DrillAppendage</spawnThingOnRemoved>
 		<stages>
 			<li>
 				<statOffsets>
@@ -289,12 +291,13 @@
 
 	<!--Builder Appendage-->
 
-	<HediffDef ParentName="ImplantHediffBase">
+	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>Gha_BuilderAppendage</defName>
 		<label>builder appendage</label>
 		<labelNoun>a builder appendage</labelNoun>
 		<description>An installed crafter appendage. A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with building.</description>
 		<defaultInstallPart>Shoulder</defaultInstallPart>
+		<spawnThingOnRemoved>Gha_BuilderAppendage</spawnThingOnRemoved>
 		<stages>
 			<li>
 				<statOffsets>
