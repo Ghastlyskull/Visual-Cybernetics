@@ -11,7 +11,7 @@
 		<spawnThingOnRemoved>Gha_ReconEye</spawnThingOnRemoved>
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>3.25</partEfficiency>
+			<partEfficiency>1.65</partEfficiency>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
 		<renderNodeProperties>
@@ -46,7 +46,7 @@
 		</descriptionHyperlinks>
 		<costList>
 			<Plasteel>15</Plasteel>
-			<ComponentSpacer>5</ComponentSpacer>
+			<ComponentSpacer>8</ComponentSpacer>
 		</costList>
 		<thingSetMakerTags>
 			<li>RewardStandardMidFreq</li>
