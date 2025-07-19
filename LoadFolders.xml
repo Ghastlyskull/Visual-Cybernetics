@@ -2,6 +2,11 @@
 <loadFolders>
 	<v1.5>
 		<li>/</li>
-		<li IfModActive="Mlie.ShowMeYourHands">Show Me Your Hands</li>
+    <li>1.5</li>
+		<li IfModActive="Mlie.ShowMeYourHands">1.5/Show Me Your Hands</li>
 	</v1.5>
+	<v1.6>
+		<li>/</li>
+    <li>1.6</li>
+	</v1.6>
 </loadFolders>

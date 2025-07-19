@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--Code was made by DetVisor-->
+	<!--Thank you, for sharing it and letting me us it-->
+
+	<!--Crafting Appendage-->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Gha_CrafterAppendage</defName>
+		<label>crafter appendage</label>
+		<labelNoun>a crafter appendage</labelNoun>
+		<description>An installed crafter appendage. A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with crafting.</description>
+		<defaultInstallPart>Shoulder</defaultInstallPart>
+		<spawnThingOnRemoved>Gha_CrafterAppendage</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<GeneralLaborSpeed>1.10</GeneralLaborSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Spastic">
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/BionicAppendiges/BionicAppendige</texPath>
+				<parentTagDef>Body</parentTagDef>
+				<debugLabel>Base Layer</debugLabel>
+				<overrideMeshSize>1</overrideMeshSize>
+				<drawSize>1.7</drawSize>
+				<rotationRange>-10~12</rotationRange>
+				<durationTicksRange>10~35</durationTicksRange>
+				<nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <useBodyPartAnchor>true</useBodyPartAnchor>
+					<childScale>0.7</childScale>
+					<bodyTypeScales>
+						<Hulk>1.1</Hulk>
+						<Fat>1.3</Fat>
+						<Thin>0.8</Thin>
+					</bodyTypeScales>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<rotationOffset>-2</rotationOffset>
+						<flip>true</flip>
+						<layer>100</layer>
+					</dataNorth>
+					<dataEast>
+						<rotationOffset>270</rotationOffset>
+						<offset>(0, 0, -0.1)</offset>
+					</dataEast>
+					<dataSouth>
+						<rotationOffset>160</rotationOffset>
+						<layer>0</layer>
+						<flip>true</flip>
+					</dataSouth>
+					<dataWest>
+						<rotationOffset>270</rotationOffset>
+						<offset>(0, 0, -0.1)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>crafting appendage</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>12</power>
+						<cooldownTime>3</cooldownTime>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+						<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+						<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.10</partEfficiency>
+		</addedPartProps>
+		<modExtensions>
+			<li Class="BodyAttachments.DefModExtension_HediffLayer"/>
+		</modExtensions>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>Gha_CrafterAppendage</defName>
+		<label>crafter appendage</label>
+		<description>A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with crafting.</description>
+		<recipeMaker>
+			<researchPrerequisite>Gha_BionicAppendageResearch</researchPrerequisite>
+		  </recipeMaker>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallCrafterAppendage</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>30</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallCrafterAppendage</defName>
+		<label>install crafter appendage</label>
+		<description>Install a crafter appendage.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Gha_CrafterAppendage</ThingDef>
+			<HediffDef>Gha_CrafterAppendage</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing crafter appendage.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gha_CrafterAppendage</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Gha_CrafterAppendage</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Gha_CrafterAppendage</addsHediff>
+	</RecipeDef>
+
+	<!--Drill Appendage-->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Gha_DrillAppendage</defName>
+		<label>drill appendage</label>
+		<labelNoun>a drill appendage</labelNoun>
+		<description>An installed crafter appendage. A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with mining.</description>
+		<defaultInstallPart>Shoulder</defaultInstallPart>
+		<spawnThingOnRemoved>Gha_DrillAppendage</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<MiningSpeed>1.2</MiningSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Spastic">
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/BionicAppendiges/BionicAppendige_Drill</texPath>
+				<parentTagDef>Body</parentTagDef>
+				<debugLabel>Base Layer</debugLabel>
+				<overrideMeshSize>1</overrideMeshSize>
+				<drawSize>1.7</drawSize>
+				<rotationRange>-10~12</rotationRange>
+				<durationTicksRange>10~35</durationTicksRange>
+				<nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <useBodyPartAnchor>true</useBodyPartAnchor>
+					<childScale>0.7</childScale>
+					<bodyTypeScales>
+						<Hulk>1.1</Hulk>
+						<Fat>1.3</Fat>
+						<Thin>0.8</Thin>
+					</bodyTypeScales>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<rotationOffset>-2</rotationOffset>
+						<flip>true</flip>
+						<layer>100</layer>
+					</dataNorth>
+					<dataEast>
+						<rotationOffset>270</rotationOffset>
+						<offset>(0, 0, -0.1)</offset>
+					</dataEast>
+					<dataSouth>
+						<rotationOffset>160</rotationOffset>
+						<layer>0</layer>
+						<flip>true</flip>
+					</dataSouth>
+					<dataWest>
+						<rotationOffset>270</rotationOffset>
+						<offset>(0, 0, -0.1)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>drill appendage</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>12</power>
+						<cooldownTime>3</cooldownTime>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+						<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+						<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.10</partEfficiency>
+		</addedPartProps>
+		<modExtensions>
+			<li Class="BodyAttachments.DefModExtension_HediffLayer"/>
+		</modExtensions>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>Gha_DrillAppendage</defName>
+		<label>drill appendage</label>
+		<description>A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with mining.</description>
+		<recipeMaker>
+			<researchPrerequisite>Gha_BionicAppendageResearch</researchPrerequisite>
+		  </recipeMaker>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallDrillAppendage</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>30</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallDrillAppendage</defName>
+		<label>install drill appendage</label>
+		<description>Install a drill appendage.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Gha_DrillAppendage</ThingDef>
+			<HediffDef>Gha_DrillAppendage</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing drill appendage.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gha_DrillAppendage</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Gha_DrillAppendage</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Gha_DrillAppendage</addsHediff>
+	</RecipeDef>
+
+	<!--Builder Appendage-->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>Gha_BuilderAppendage</defName>
+		<label>builder appendage</label>
+		<labelNoun>a builder appendage</labelNoun>
+		<description>An installed crafter appendage. A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with building.</description>
+		<defaultInstallPart>Shoulder</defaultInstallPart>
+		<spawnThingOnRemoved>Gha_BuilderAppendage</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<ConstructionSpeed>1.2</ConstructionSpeed>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Spastic">
+				<texPath>Things/Pawn/Humanlike/BodyAttachments/BionicAppendiges/BionicAppendige_Builder</texPath>
+				<parentTagDef>Body</parentTagDef>
+				<debugLabel>Base Layer</debugLabel>
+				<overrideMeshSize>1</overrideMeshSize>
+				<drawSize>1.7</drawSize>
+				<rotationRange>-10~12</rotationRange>
+				<durationTicksRange>10~35</durationTicksRange>
+				<nextSpasmTicksRange>10~50</nextSpasmTicksRange>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <useBodyPartAnchor>true</useBodyPartAnchor>
+					<childScale>0.7</childScale>
+					<bodyTypeScales>
+						<Hulk>1.1</Hulk>
+						<Fat>1.3</Fat>
+						<Thin>0.8</Thin>
+					</bodyTypeScales>
+					<defaultData>
+						<layer>80</layer>
+					</defaultData>
+					<dataNorth>
+						<rotationOffset>-2</rotationOffset>
+						<flip>true</flip>
+						<layer>100</layer>
+					</dataNorth>
+					<dataEast>
+						<rotationOffset>270</rotationOffset>
+						<offset>(0, 0, -0.1)</offset>
+					</dataEast>
+					<dataSouth>
+						<rotationOffset>160</rotationOffset>
+						<layer>0</layer>
+						<flip>true</flip>
+					</dataSouth>
+					<dataWest>
+						<rotationOffset>270</rotationOffset>
+						<offset>(0, 0, -0.1)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>builder appendage</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>12</power>
+						<cooldownTime>3</cooldownTime>
+						<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+						<soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+						<soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.10</partEfficiency>
+		</addedPartProps>
+		<modExtensions>
+			<li Class="BodyAttachments.DefModExtension_HediffLayer"/>
+		</modExtensions>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>Gha_BuilderAppendage</defName>
+		<label>builder appendage</label>
+		<description>A heavy metallic appendage that is connected to the Axillary nerve activating hydraulic pistons and mechanical joints. Which allows the appendage to assist with precise and controlled movements with building.</description>
+		<recipeMaker>
+			<researchPrerequisite>Gha_BionicAppendageResearch</researchPrerequisite>
+		  </recipeMaker>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallBuilderAppendage</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>30</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<Mass>0.3</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>InstallBuilderAppendage</defName>
+		<label>install builder appendage</label>
+		<description>Install a builder appendage.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Gha_BuilderAppendage</ThingDef>
+			<HediffDef>Gha_BuilderAppendage</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing builder appendage.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gha_BuilderAppendage</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Gha_BuilderAppendage</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Gha_BuilderAppendage</addsHediff>
+	</RecipeDef>
+</Defs>
